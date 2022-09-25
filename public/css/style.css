@@ -1,0 +1,149 @@
+*{
+    margin-right: 0;
+    padding-right: 0;
+}
+body{
+    margin: 0;
+    background-color: #DCD7D7;
+    font-family: 'Raleway', sans-serif;
+}
+.navbar{
+    
+    padding-top: 0;
+    background-color: #175683;
+    -webkit-box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
+    -moz-box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
+    box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
+}
+.row{
+    margin-right: 0;
+}
+.navbar-brand{
+    font-family: 'Kanit', sans-serif;
+}
+.navbar a{
+    font-size: 2rem;
+}
+#about{
+    height: 25rem;
+}
+.imageText{
+    color: #DCD7D7;
+    height: auto;
+    padding: 1rem;
+    background-color: #175683;
+    border-radius: .75rem;
+    webkit-box-shadow: 15px 18px 24px -5px rgba(0,0,0,0.88);
+    -moz-box-shadow: 15px 18px 24px -5px rgba(0,0,0,0.88);
+    box-shadow: 15px 18px 24px -5px rgba(0,0,0,0.88);
+}
+#main{
+    margin-top: 10rem;
+    padding-right: 0;
+}
+#servicios{
+    margin-top: 10rem;
+    padding:  2rem 0;
+ 
+    margin-right: 0 !important;
+    height: auto;
+}
+
+#servicios h2{
+    font-size: 2.5rem;
+    color: #F75C14 ;
+    letter-spacing: .1rem;
+    margin-bottom: 3rem;
+}
+#servicios h3{
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #DCD7D7;
+}
+.pack{
+    width: 18rem;
+    height: auto;    
+    padding: 2rem;
+    font-size: large;
+    border-radius: .75rem;
+    background-color: #175683;
+    color: black;
+    webkit-box-shadow: 15px 18px 24px -5px rgba(0,0,0,0.88);
+    -moz-box-shadow: 15px 18px 24px -5px rgba(0,0,0,0.88);
+    box-shadow: 15px 18px 24px -5px rgba(0,0,0,0.88);
+}
+.card{
+    color: white;
+    background-color:#175683;
+}
+#footer{
+    background-color: #175683;
+    margin-top: 7rem;
+ 
+}
+
+input,
+input:focus-visible,
+textarea,
+button {
+    width: 20rem;
+    outline: unset ;
+    border: 2px solid #DCD7D7;
+    margin-bottom: 1rem;
+    background-color: #175683;
+}
+input::placeholder, textarea::placeholder{
+    padding-left: 1rem;
+    color: #DCD7D7;
+}
+#contacto h3{
+    font-size: 2.5rem;
+    color: #DCD7D7;
+}
+#contacto ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-right: 14rem;
+}
+#contacto i {
+    font-size: 3rem;
+    color: #DCD7D7;
+}
+button{
+    color:#DCD7D7;
+}
+button:hover{
+    background-color: #DCD7D7;
+    color: #F75C14;
+}
+
+@media (max-width: 992px) {
+    #aboutImg1{
+        margin-left: 2rem;
+    }
+    #contacto ul {
+        padding-right: 0;
+    }
+}
+@media (max-width: 768px)  {
+    .img-fluid{
+       display: none;
+    }
+    #about{
+        height: auto;
+    }
+    #servicios{
+        margin-top: 1rem;
+    }
+    .pack{
+        width: 30rem;
+    }
+    #contacto{
+        width: 54%;
+    }
+    #formulario{
+        padding-left: 8rem;
+    }
+}
