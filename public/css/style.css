@@ -25,7 +25,7 @@ body{
     font-size: 2rem;
 }
 #about{
-    height: 25rem;
+    height: auto;
 }
 .imageText{
     color: #DCD7D7;
@@ -118,32 +118,47 @@ button:hover{
     background-color: #DCD7D7;
     color: #F75C14;
 }
-
-@media (max-width: 992px) {
-    #aboutImg1{
-        margin-left: 2rem;
-    }
-    #contacto ul {
-        padding-right: 0;
-    }
+.card-group{
+    margin: 0;
 }
-@media (max-width: 768px)  {
-    .img-fluid{
-       display: none;
+
+.boxPack{
+    margin-left: 0;
+}
+
+@media (max-width: 425px){
+    #aboutImg1{
+        display: none;
     }
-    #about{
-        height: auto;
+    .imageText{
+        width: 20rem;
+        margin: 3rem 0 0 1rem;
     }
     #servicios{
-        margin-top: 1rem;
+        margin-top: 4rem ;
+        padding: 0;
     }
-    .pack{
-        width: 30rem;
+    .boxPack{
+        margin: 0 0 2rem 3rem;
     }
-    #contacto{
-        width: 54%;
+    .card-group{
+        margin-left: 0 ;
     }
-    #formulario{
-        padding-left: 8rem;
+    #social li{
+        margin-right: 3rem;
+    }
+}
+@media (max-width: 768px){
+    input, input:focus-visible, textarea, button {
+        width: 19rem;
+    }
+    #social li{
+        margin-right: 2rem;
+    }
+    .card-group{
+        margin: 0 ;
+    }
+    #about{
+        margin-left: 1rem;
     }
 }
