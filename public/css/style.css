@@ -15,6 +15,10 @@ body{
     -moz-box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
     box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
 }
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
+    color: #F75C14;
+    border-bottom: 2px solid #F75C14 ;
+}
 .row{
     margin-right: 0;
 }
@@ -24,9 +28,11 @@ body{
 .navbar a{
     font-size: 2rem;
 }
-#about{
+.about{
     height: auto;
+    margin-bottom: 10rem;
 }
+
 .imageText{
     color: #DCD7D7;
     height: auto;
@@ -38,20 +44,19 @@ body{
     box-shadow: 15px 18px 24px -5px rgba(0,0,0,0.88);
 }
 #main{
-    margin-top: 10rem;
+    margin-top: 20rem;
     padding-right: 0;
 }
 #servicios{
     margin-top: 10rem;
     padding:  2rem 0;
- 
+    margin-left: 3rem;
     margin-right: 0 !important;
     height: auto;
 }
 
-#servicios h2{
+#servicios h2, #otrosServicios h2{
     font-size: 2.5rem;
-    color: #F75C14 ;
     letter-spacing: .1rem;
     margin-bottom: 3rem;
 }
@@ -72,20 +77,41 @@ body{
     -moz-box-shadow: 15px 18px 24px -5px rgba(0,0,0,0.88);
     box-shadow: 15px 18px 24px -5px rgba(0,0,0,0.88);
 }
+#servicios button{
+    margin: 4rem 3rem 0 0;
+    font-size: 1.5rem;
+    width: 20rem;
+    color: black;
+    border: 2px solid #175683;
+    padding: 1rem;
+}
+
+#otrosServicios{
+    margin-top: 6rem;
+    margin-right: 1rem;
+}
+#otrosServicios button {
+    font-size: 1.2rem;
+    color: black;
+    border: 2px solid #175683;
+    padding: 1rem;
+}
 .card{
-    color: white;
-    background-color:#175683;
+    color: black;
+    background-color:white;
+    -webkit-box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
+    -moz-box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
+    box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
 }
 #footer{
     background-color: #175683;
     margin-top: 7rem;
- 
 }
 
 input,
 input:focus-visible,
 textarea,
-button {
+#formulario button {
     width: 20rem;
     outline: unset ;
     border: 2px solid #DCD7D7;
@@ -95,6 +121,9 @@ button {
 input::placeholder, textarea::placeholder{
     padding-left: 1rem;
     color: #DCD7D7;
+}
+input:focus, textarea:focus{
+    border-color: #F75C14;
 }
 #contacto h3{
     font-size: 2.5rem;
@@ -111,6 +140,9 @@ input::placeholder, textarea::placeholder{
     font-size: 3rem;
     color: #DCD7D7;
 }
+#contacto i:hover{
+    color:#F75C14;
+}
 button{
     color:#DCD7D7;
 }
@@ -118,47 +150,82 @@ button:hover{
     background-color: #DCD7D7;
     color: #F75C14;
 }
-.card-group{
-    margin: 0;
-}
-
 .boxPack{
     margin-left: 0;
 }
 
-@media (max-width: 425px){
-    #aboutImg1{
-        display: none;
-    }
-    .imageText{
-        width: 20rem;
-        margin: 3rem 0 0 1rem;
-    }
-    #servicios{
-        margin-top: 4rem ;
-        padding: 0;
-    }
-    .boxPack{
-        margin: 0 0 2rem 3rem;
-    }
-    .card-group{
-        margin-left: 0 ;
-    }
-    #social li{
-        margin-right: 3rem;
-    }
+/* animaciones de los elementos */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2.5s;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.boxPack:nth-child(2){
+    transition-delay: 200ms;
+}
+.boxPack:nth-child(3){
+    transition-delay: 200ms;
 }
 @media (max-width: 768px){
-    input, input:focus-visible, textarea, button {
-        width: 19rem;
+    #main{
+        overflow: hidden;
+    }
+    .card{
+        width: 20rem;
+    }
+    input, input:focus-visible, textarea,#form button {
+        width: 16rem;
     }
     #social li{
         margin-right: 2rem;
     }
-    .card-group{
-        margin: 0 ;
-    }
-    #about{
-        margin-left: 1rem;
+    
+    #form{
+        padding-right: 1rem;
     }
 }
+@media (max-width:425px){
+    #main{
+        overflow: hidden;
+    }
+   .about{
+    margin-right: 1rem;
+    display: block;
+    margin-left: 0;
+   }.imageText{
+    margin: 3rem 0 4rem 1rem;
+    width: 20rem;
+   }
+   #servicios{
+    margin-left: 0;
+   }
+   .boxPack{
+    width: 20rem;
+    margin-bottom: 2rem;
+   }
+   #otrosServicios{
+    margin-right: 0;
+   }
+   .card{
+    width: 20rem;
+   }
+   #otrosServicios button {
+    width: 15rem;
+    }
+    .card:nth-child(2){
+        margin-top: 2rem;
+    }
+    #social li{
+        margin-right: 3rem;
+    }
+    input, input:focus-visible, textarea,#form button {
+        width: 22rem;
+    }
+}
+
