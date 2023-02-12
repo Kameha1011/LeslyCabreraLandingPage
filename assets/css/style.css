@@ -1,41 +1,120 @@
 *{
-    margin-right: 0;
-    padding-right: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
     margin: 0;
     background-color: #DCD7D7;
     font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
 }
 .navbar{
-    
     padding-top: 0;
+    background-color: transparent;
+    
+}
+#navbar{
     background-color: #175683;
     -webkit-box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
     -moz-box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
     box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
+    transition: 1s ease-in-out all;
 }
-.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
-    color: #F75C14;
-    border-bottom: 2px solid #F75C14 ;
+.nav-link{
+    border-radius: .7rem;
 }
-.row{
-    margin-right: 0;
+.nav-link:focus,
+.nav-link:hover{
+    background-color: #F75C14;
+    transition: 1s ease-out all;
 }
 .navbar-brand{
     font-family: 'Kanit', sans-serif;
 }
 .navbar a{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
-.about{
-    height: auto;
-    margin-bottom: 10rem;
+header{
+    height: 100vh;
+    background-image: url(../imgs/banner.jpg);
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    color: #DCD7D7;
+}
+header p {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
+/* https://codepen.io/Danil89/pen/MzrEdX */
+header a{
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 60px;
+  width: 210px;
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid #175683;
+}
+header span{
+    color: #175683;
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+  }
+     
+header span:hover {
+    animation: rotate 0.7s ease-in-out both;
+  }
+      
+header span{
+animation: storm 0.7s ease-in-out both;
+animation-delay: 0.06s;
+}
+    
+
+    
+@keyframes rotate{
+    0%{transform: rotate(0deg) translate3d(0, 0, 0)}
+        
+    25%{transform: rotate(3deg) translate3d(0, 0, 0)}
+        
+    50%{transform: rotate(-3deg) translate3d(0, 0, 0)}
+        
+    75%{transform: rotate(1deg) translate3d(0, 0, 0)}
+        
+    100%{transform: rotate(0deg) translate3d(0, 0, 0)}
+        
+}
+@keyframes storm {
+    0%{transform: translate3d( 0, 0, 0) translateZ(0)}
+        
+    25%{transform: translate3d( 4px, 0, 0) translateZ(0)}
+        
+    50%{transform: translate3d( -3px, 0, 0) translateZ(0)}
+        
+    75%{transform: translate3d( 2px, 0, 0) translateZ(0)}
+        
+    100%{transform: translate3d( 0, 0, 0) translateZ(0)}
+        
+}
+
+
+#about img{
+    height: 20rem;
+    width: 40rem;
+}
 .imageText{
     color: #DCD7D7;
-    height: auto;
+    width: 40%;
     padding: 1rem;
     background-color: #175683;
     border-radius: .75rem;
@@ -43,30 +122,23 @@ body{
     -moz-box-shadow: 15px 18px 24px -5px rgba(0,0,0,0.88);
     box-shadow: 15px 18px 24px -5px rgba(0,0,0,0.88);
 }
-#main{
+
+#planes{
     margin-top: 20rem;
-    padding-right: 0;
-}
-#servicios{
-    margin-top: 10rem;
-    padding:  2rem 0;
-    margin-left: 3rem;
-    margin-right: 0 !important;
-    height: auto;
 }
 
-#servicios h2, #otrosServicios h2{
-    font-size: 2.5rem;
+#planes h2, #servicios h2{
+    font-size: 3rem;
+    font-weight: bold;
     letter-spacing: .1rem;
     margin-bottom: 3rem;
 }
-#servicios h3{
+#planes h3{
     font-weight: 700;
     margin-bottom: 2rem;
     color: #DCD7D7;
 }
-.pack{
-    width: 18rem;
+ .pack{
     height: auto;    
     padding: 2rem;
     font-size: large;
@@ -77,7 +149,7 @@ body{
     -moz-box-shadow: 15px 18px 24px -5px rgba(0,0,0,0.88);
     box-shadow: 15px 18px 24px -5px rgba(0,0,0,0.88);
 }
-#servicios button{
+#planes button{
     margin: 4rem 3rem 0 0;
     font-size: 1.5rem;
     width: 20rem;
@@ -86,146 +158,144 @@ body{
     padding: 1rem;
 }
 
-#otrosServicios{
-    margin-top: 6rem;
-    margin-right: 1rem;
+#servicios{
+    margin: 6rem 0;
 }
-#otrosServicios button {
+#servicios button {
+    background-color: #175683;
     font-size: 1.2rem;
     color: black;
     border: 2px solid #175683;
     padding: 1rem;
+    border-radius: .7rem;
+}
+#servicios button:hover{
+    background-color: #F75C14;
 }
 .card{
+    background-color: #b3b1b1;
     color: black;
-    background-color:white;
     -webkit-box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
     -moz-box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
     box-shadow: 0px 14px 19px -5px rgba(0,0,0,0.88);
+    border-radius: 1rem;
 }
-#footer{
+footer{
     background-color: #175683;
     margin-top: 7rem;
+    width: 100%;
+    padding: 0;
+    color: white;
 }
-
-input,
-input:focus-visible,
-textarea,
-#formulario button {
-    width: 20rem;
-    outline: unset ;
-    border: 2px solid #DCD7D7;
+form{
+    width: 50%;
+}
+form button{
+    width: 8rem;
+    border: none;
+    border-radius: .8rem;
+    background-color: #b3b1b1;
+    padding: .5;
+}
+.form-control,
+.form-control:focus,
+.form-control:target
+.form-control:focus-visible,
+.form-control:active,
+textarea {
+    outline: none;
+    box-shadow: none;
     margin-bottom: 1rem;
     background-color: #175683;
+    border: none;
+    border-bottom: 1px solid #b3b1b1;
+    color: #DCD7D7;
 }
-input::placeholder, textarea::placeholder{
+.form-control::placeholder, textarea::placeholder{
     padding-left: 1rem;
     color: #DCD7D7;
 }
-input:focus, textarea:focus{
-    border-color: #F75C14;
-}
-#contacto h3{
+
+#social h3{
     font-size: 2.5rem;
     color: #DCD7D7;
 }
-#contacto ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1rem;
-    padding-right: 14rem;
-}
-#contacto i {
-    font-size: 3rem;
+#social i {
+    font-size: 1.5rem;
     color: #DCD7D7;
 }
-#contacto i:hover{
+#social i:hover{
     color:#F75C14;
 }
-button{
-    color:#DCD7D7;
+#copy{
+    padding: .5rem;
+    width: 100%;
+    background-color: #104266;
 }
-button:hover{
-    background-color: #DCD7D7;
-    color: #F75C14;
-}
-.boxPack{
-    margin-left: 0;
-}
+
 
 /* animaciones de los elementos */
 .hidden {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 2.5s;
+    transition: all  1s;
 }
 .show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
 }
-.boxPack:nth-child(2){
+
+.pack:nth-child(2), .card:nth-child(2) {
     transition-delay: 200ms;
 }
-.boxPack:nth-child(3){
-    transition-delay: 200ms;
+.pack:nth-child(3) {
+    transition-delay: 300ms;
 }
+
+@media(max-width: 1024px){
+    .pack{
+        width: 30%;
+    }
+}
+
 @media (max-width: 768px){
-    #main{
-        overflow: hidden;
+    header p{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .imageText{
+        width: 90%;
+        margin-bottom: 3rem;
+    }
+    #planes{
+        margin-top: 10rem;
+    }
+    #planes div{
+        align-items: center;
+    }
+    .pack{
+        width: 70%;
     }
     .card{
-        width: 20rem;
-    }
-    input, input:focus-visible, textarea,#form button {
-        width: 16rem;
-    }
-    #social li{
-        margin-right: 2rem;
-    }
-    
-    #form{
-        padding-right: 1rem;
+        margin-bottom: 2rem;
     }
 }
 @media (max-width:425px){
-    #main{
-        overflow: hidden;
+    header{
+        color: black;
+        background:none;
     }
-   .about{
-    margin-right: 1rem;
-    display: block;
-    margin-left: 0;
-   }.imageText{
-    margin: 3rem 0 4rem 1rem;
-    width: 20rem;
-   }
-   #servicios{
-    margin-left: 0;
-   }
-   .boxPack{
-    width: 20rem;
-    margin-bottom: 2rem;
-   }
-   #otrosServicios{
-    margin-right: 0;
-   }
-   .card{
-    width: 20rem;
-   }
-   #otrosServicios button {
-    width: 15rem;
+    header h2{
+        text-align: center;
     }
-    .card:nth-child(2){
-        margin-top: 2rem;
+    header p{
+        font-size: 1rem;
+        text-align: center;
     }
-    #social li{
-        margin-right: 3rem;
-    }
-    input, input:focus-visible, textarea,#form button {
-        width: 22rem;
+    .pack{
+        width: 100%;
     }
 }
 

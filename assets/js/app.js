@@ -1,4 +1,4 @@
-
+const nav = document.querySelector('nav');
 const observer = new IntersectionObserver((entries) =>{
     entries.forEach((entry) =>{
         console.log(entry)
@@ -12,3 +12,8 @@ const observer = new IntersectionObserver((entries) =>{
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+// change nav bgcolor
+window.addEventListener('scroll', () => {
+    (window.scrollY >= 100)? nav.setAttribute('id', 'navbar') : nav.removeAttribute('id');
+})
